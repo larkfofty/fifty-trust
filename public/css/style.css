@@ -1,0 +1,908 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"], input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html, body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 83%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.428em;
+}
+
+h2 {
+  font-size: 3.428em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.coin-contain, .pledge-contain {
+  width: 50%;
+  margin-top: 4em;
+}
+
+.coin-contain {
+  float: left;
+}
+
+.pledge-contain {
+  float: right;
+}
+
+.total {
+  margin-top: .1em;
+}
+
+.twitter-share-button, .facebook-share-button {
+  display: block;
+  width: 160px;
+  height: 42px;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 1em;
+}
+
+.twitter-share-button {
+  background-color: #55acee;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.facebook-share-button {
+  background-color: #3b5a9a;
+  float: left;
+}
+
+.copy {
+  margin-top: 1.5em;
+}
+
+footer {
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+  font-weight: 700;
+}
+
+footer a {
+  color: #000;
+}
+
+/* Pie Chart */
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+  margin: 0 auto;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.progress-radial .overlay {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+}
+
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+.progress-0 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(90deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-1 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(93.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-2 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(97.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-3 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(100.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-4 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(104.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-5 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(108deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-6 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(111.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-7 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(115.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-8 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(118.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-9 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(122.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-10 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(126deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-11 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(129.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-12 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(133.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-13 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(136.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-14 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(140.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-15 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(144deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-16 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(147.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-17 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(151.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-18 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(154.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-19 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(158.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-20 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(162deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-21 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(165.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-22 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(169.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-23 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(172.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-24 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(176.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-25 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(180deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-26 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(183.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-27 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(187.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-28 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(190.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-29 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(194.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-30 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(198deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-31 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(201.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-32 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(205.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-33 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(208.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-34 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(212.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-35 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(216deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-36 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(219.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-37 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(223.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-38 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(226.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-39 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(230.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-40 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(234deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-41 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(237.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-42 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(241.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-43 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(244.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-44 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(248.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-45 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(252deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-46 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(255.6deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-47 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(259.2deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-48 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(262.8deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-49 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(266.4deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-50 {
+  background-image: linear-gradient(-90deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-51 {
+  background-image: linear-gradient(-86.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-52 {
+  background-image: linear-gradient(-82.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-53 {
+  background-image: linear-gradient(-79.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-54 {
+  background-image: linear-gradient(-75.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-55 {
+  background-image: linear-gradient(-72deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-56 {
+  background-image: linear-gradient(-68.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-57 {
+  background-image: linear-gradient(-64.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-58 {
+  background-image: linear-gradient(-61.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-59 {
+  background-image: linear-gradient(-57.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-60 {
+  background-image: linear-gradient(-54deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-61 {
+  background-image: linear-gradient(-50.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-62 {
+  background-image: linear-gradient(-46.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-63 {
+  background-image: linear-gradient(-43.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-64 {
+  background-image: linear-gradient(-39.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-65 {
+  background-image: linear-gradient(-36deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-66 {
+  background-image: linear-gradient(-32.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-67 {
+  background-image: linear-gradient(-28.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-68 {
+  background-image: linear-gradient(-25.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-69 {
+  background-image: linear-gradient(-21.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-70 {
+  background-image: linear-gradient(-18deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-71 {
+  background-image: linear-gradient(-14.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-72 {
+  background-image: linear-gradient(-10.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-73 {
+  background-image: linear-gradient(-7.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-74 {
+  background-image: linear-gradient(-3.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-75 {
+  background-image: linear-gradient(0deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-76 {
+  background-image: linear-gradient(3.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-77 {
+  background-image: linear-gradient(7.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-78 {
+  background-image: linear-gradient(10.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-79 {
+  background-image: linear-gradient(14.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-80 {
+  background-image: linear-gradient(18deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-81 {
+  background-image: linear-gradient(21.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-82 {
+  background-image: linear-gradient(25.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-83 {
+  background-image: linear-gradient(28.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-84 {
+  background-image: linear-gradient(32.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-85 {
+  background-image: linear-gradient(36deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-86 {
+  background-image: linear-gradient(39.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-87 {
+  background-image: linear-gradient(43.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-88 {
+  background-image: linear-gradient(46.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-89 {
+  background-image: linear-gradient(50.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-90 {
+  background-image: linear-gradient(54deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-91 {
+  background-image: linear-gradient(57.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-92 {
+  background-image: linear-gradient(61.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-93 {
+  background-image: linear-gradient(64.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-94 {
+  background-image: linear-gradient(68.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-95 {
+  background-image: linear-gradient(72deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-96 {
+  background-image: linear-gradient(75.6deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-97 {
+  background-image: linear-gradient(79.2deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-98 {
+  background-image: linear-gradient(82.8deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-99 {
+  background-image: linear-gradient(86.4deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.progress-100 {
+  background-image: linear-gradient(90deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}

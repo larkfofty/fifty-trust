@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>In 50 We Trust</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>In 50 We Trust</h1>
+      <div class="coin-contain">
+
+        <div id="circle" class="progress-radial progress-50">
+          <div class="overlay"></div>
+        </div>
+
+      </div>
+      <div class="pledge-contain">
+        <h2 class="backers"></h2>
+        <h3>backers</h3>
+
+        <h2 class="total"></h2>
+        <h3>pledged of $50,000,000 goal</h3>
+
+        <p class="copy">The floating record is a high performance turntable. The floating record is a high performance turntable.</p>
+
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet">In 50 We Trust</a>
+        <a class="facebook-share-button" href="#">In 50 We Trust</a>
+      </div>
+    </div>
+
+    <footer>Made by <a href="#">Babyman</a> &amp; <a href="#">Sean Don</a>.</footer>
+    <button class="donate">Press Me</button>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/js/js-cookie.js" type="text/javascript"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      $('.donate').click(function(){
+        if (Cookies.get('checkfifty') == undefined) {
+          Cookies.set('checkfifty', 'dipswitch');
+          socket.emit('oneMoreBacker', null);
+        }
+
+        socket.emit('donated', null);
+        return false;
+      });
+
+      socket.on('donated', function(count){
+        var percent = Math.ceil((count / 50000000) * 100);
+        var progressClass = $('#circle').attr('class').split(' ')[1];
+        $('#circle').removeClass(progressClass);
+        $('#circle').addClass('progress-' + percent);
+        count = Number(count).toFixed(2);
+        count = '$' + count;
+        $('.total').html(count);
+      });
+
+      socket.on('oneMoreBacker', function(backers) {
+        $('.backers').html(backers);
+      });
+    </script>
+  </body>
+</html>
