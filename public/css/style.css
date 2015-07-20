@@ -995,11 +995,13 @@ footer .share .fb-share-button {
 .flip-container {
   width: 350px;
   height: 350px;
-  position: absolute;
-  perspective: 700px;
-  z-index: 100;
+  -webkit-perspective: 700;
+  -moz-perspective: 700;
+  perspective: 700;
+  z-index: 9000;
   top: 1px;
   right: -10px;
+  cursor: pointer;
 }
 
 #card {
@@ -1009,7 +1011,11 @@ footer .share .fb-share-button {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
   transition: transform 1s;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
   transform-origin: center center;
   -webkit-transition: all 0.7s ease-in-out;
   -moz-transition: all 0.7s ease-in-out;
@@ -1028,9 +1034,13 @@ footer .share .fb-share-button {
 }
 
 #card .back {
+  display: block;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 #card.flipped {
+  display: block;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }

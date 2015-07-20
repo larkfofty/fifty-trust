@@ -13,17 +13,16 @@
       <img src="/images/in-50-we-trust-logo.png" class="logo">
       <div class="coin-contain">
 
-
-
         <div id="circle" class="progress-radial progress-50">
           <div class="overlay">
             
-            <section class="flip-container">
-      <div id="card">
-        <figure class="front"><img src="/images/half-dollar-tails.png"></figure>
-        <figure class="back"><img src="/images/half-dollar-tails.png"></figure>
-      </div>
-    </section>
+            <a class="flip-container">
+              <div id="card">
+                <figure class="front"><img src="/images/half-dollar-heads.png"></figure>
+                <figure class="back"><img src="/images/half-dollar-tails.png"></figure>
+              </div>
+            </a>
+
           </div>
         </div>
 
@@ -63,7 +62,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
-      $('.click-button').click(function(){
+      var clicked = function () {
         $('#card').toggleClass('flipped');
 
         if (Cookies.get('checkfifty') == undefined) {
@@ -72,6 +71,15 @@
         }
 
         socket.emit('donated', null);
+      }
+
+      $('.click-button').click(function(){
+        clicked();
+        return false;
+      });
+
+      $('.coin-contain').click(function(){
+        clicked();
         return false;
       });
 
