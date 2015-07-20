@@ -13,8 +13,18 @@
       <img src="/images/in-50-we-trust-logo.png" class="logo">
       <div class="coin-contain">
 
+
+
         <div id="circle" class="progress-radial progress-50">
-          <div class="overlay"></div>
+          <div class="overlay">
+            
+            <section class="flip-container">
+      <div id="card">
+        <figure class="front"><img src="/images/half-dollar-tails.png"></figure>
+        <figure class="back"><img src="/images/half-dollar-tails.png"></figure>
+      </div>
+    </section>
+          </div>
         </div>
 
       </div>
@@ -38,7 +48,7 @@
     <footer>
 
       <div class="credits">
-        Made by <a href="#">Babyman</a> &amp; <a href="#">Sean Don</a>.
+        Made by <a href="http://instagram.com/thatsbabyman">Babyman</a> &amp; <a href="http://twitter.com/larkfofty">Sean Don</a>.
       </div>
 
       <div class="share">
@@ -54,6 +64,8 @@
     <script>
       var socket = io();
       $('.click-button').click(function(){
+        $('#card').toggleClass('flipped');
+
         if (Cookies.get('checkfifty') == undefined) {
           Cookies.set('checkfifty', 'dipswitch');
           socket.emit('oneMoreBacker', null);
