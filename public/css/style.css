@@ -937,6 +937,7 @@ footer .share .fb-share-button {
   .container {
     width: 100%;
   }
+  font-size: 2.7em;
   .coin-contain, .pledge-contain {
     float: none;
     width: 100%;
