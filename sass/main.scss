@@ -166,6 +166,11 @@ $half: round($loops / 2);
 }
 
 @media (max-width: 840px) {
+  
+  .container {
+    width: 100%;
+  }
+
   .coin-contain, .pledge-contain {
     float: none;
     width: 100%;

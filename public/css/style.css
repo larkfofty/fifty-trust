@@ -934,6 +934,9 @@ footer .share .fb-share-button {
 }
 
 @media (max-width: 840px) {
+  .container {
+    width: 100%;
+  }
   .coin-contain, .pledge-contain {
     float: none;
     width: 100%;
