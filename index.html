@@ -4,10 +4,12 @@
     <title>In 50 We Trust</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
   </head>
   <body>
+
     <div class="container">
-      <h1>In 50 We Trust</h1>
+      <img src="/images/in-50-we-trust-logo.png" class="logo">
       <div class="coin-contain">
 
         <div id="circle" class="progress-radial progress-50">
@@ -16,27 +18,41 @@
 
       </div>
       <div class="pledge-contain">
-        <h2 class="backers"></h2>
-        <h3>backers</h3>
-
-        <h2 class="total"></h2>
-        <h3>pledged of $50,000,000 goal</h3>
+        <div class="backer-contain">
+          <h2 class="backers"></h2>
+          <h3>backers</h3>
+        </div>
+        
+        <div class="total-contain">
+          <h2 class="total"></h2>
+          <h3>pledged of $50,000,000 goal</h3>
+        </div>
+        
 
         <p class="copy">The floating record is a high performance turntable. The floating record is a high performance turntable.</p>
 
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet">In 50 We Trust</a>
-        <a class="facebook-share-button" href="#">In 50 We Trust</a>
+        <a class="click-button" href="#">Click or Tap Coin</a>
       </div>
     </div>
+    <footer>
 
-    <footer>Made by <a href="#">Babyman</a> &amp; <a href="#">Sean Don</a>.</footer>
-    <button class="donate">Press Me</button>
+      <div class="credits">
+        Made by <a href="#">Babyman</a> &amp; <a href="#">Sean Don</a>.
+      </div>
+
+      <div class="share">
+        <a href="https://twitter.com/share" data-hashtags="in50wetrust" class="twitter-share-button">Tweet</a>
+        <div class="fb-share-button" data-href="http://www.in50wetrust.com" data-layout="button_count"></div>
+      </div>
+
+    </footer>
+
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/js/js-cookie.js" type="text/javascript"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
-      $('.donate').click(function(){
+      $('.click-button').click(function(){
         if (Cookies.get('checkfifty') == undefined) {
           Cookies.set('checkfifty', 'dipswitch');
           socket.emit('oneMoreBacker', null);
@@ -60,5 +76,14 @@
         $('.backers').html(backers);
       });
     </script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </body>
 </html>

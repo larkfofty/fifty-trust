@@ -1,13 +1,20 @@
 var express = require('express');
+var favicon = require('serve-favicon');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var redis = require('redis');
 var client =  redis.createClient(6379, 'fifty-trust.mlscbx.0001.use1.cache.amazonaws.com');
 
-http.listen(3000);
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.use(express.static('public'));
+
+http.listen(3000);
+
+
+
 
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/index.html');
